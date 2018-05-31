@@ -14,7 +14,12 @@
 // var num1 = parseInt(prompt("Please give me a number: "));
 // var num2 = parseInt(prompt("Please give me another number: "));
 
-// console.log(num1-num2);
+// if (num1>num2) {
+// 	console.log(num1-num2);
+// } else {
+// 	console.log(num2-num1);
+// };
+
 
 
 
@@ -222,7 +227,8 @@ var Phonebook = {
 var userName = prompt("What's his name?");
 // var userNo = prompt("what's his number?");
 
-console.log(Phonebook.userName);
+console.log(Phonebook[userName]);
+
 
 
 
@@ -269,3 +275,4 @@ var MutateMeNot = [1, 2, 3, 4, 5];
 
 
 // console.log("The value of MutateMeNot is", MutateMeNot);
+ 		
