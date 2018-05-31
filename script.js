@@ -11,11 +11,10 @@
 // Write your solution below.
 // ====================================================================
 
+// var num1 = parseInt(prompt("Please give me a number: "));
+// var num2 = parseInt(prompt("Please give me another number: "));
 
-
-
-
-
+// console.log(num1-num2);
 
 
 
@@ -36,6 +35,45 @@
 // ====================================================================
 // Write your solution below
 // ====================================================================
+
+// var num = prompt("Please write a number: ");
+
+// num = num.split('');
+
+// if (num.length == 1) {
+// 	if(num[num.length-1] == 1) {
+// 			num = num.join('');
+// 			console.log(num + "st");
+// 		} else if (num[num.length-1] == 2) {
+// 			num = num.join('');
+// 			console.log(num + "nd");
+// 		} else if (num[num.length-1] == 3) {
+// 			num = num.join('');
+// 			console.log(num + "rd");
+// 		} else {
+// 			num = num.join('');
+// 			console.log(num + "th");
+// 		};
+// } else {
+// 	if (num[num.length-2] == 1) {
+// 		num = num.join('');
+// 		console.log(num + "th");	
+// 	} else {
+// 		if(num[num.length-1] == 1) {
+// 			num = num.join('');
+// 			console.log(num + "st");
+// 		} else if (num[num.length-1] == 2) {
+// 			num = num.join('');
+// 			console.log(num + "nd");
+// 		} else if (num[num.length-1] == 3) {
+// 			num = num.join('');
+// 			console.log(num + "rd");
+// 		} else {
+// 			num = num.join('');
+// 			console.log(num + "th");
+// 		};
+// 	};
+// }
 
 
 
@@ -61,14 +99,15 @@
 // Write your solution below.
 // =======================================================================
 
+// var ran = Math.floor((Math.random() * 10) + 1);
 
+// var notRan = parseInt(prompt('please give me an integer: '));
 
-
-
-
-
-
-
+// if (notRan == ran) {
+// 	alert('you matched with the RNG!');
+// } else {
+// 	alert('aww, try again!');
+// };
 
 
 
@@ -89,15 +128,17 @@
 // Write your solution below.
 // =====================================================================
 
+var possible = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
+var array = possible.split('');
+var str = [];
 
+for (i=0; i<6; i++) {
+	var picker = Math.floor((Math.random() * 36) + 1);
+	str.push(possible[picker]);
+}
 
-
-
-
-
-
-
+console.log(str.join(''));
 
 
 
@@ -116,11 +157,20 @@
 // ====================================================================
 
 var testArray = [1, 2, 4, 8, 16, 32, 64, 128];
+var copy = [];
+for (i=0; i<8; i++) {
+	copy.push(testArray[i]);
+};
 
+var len = testArray.length;
 
+for (i=0; i<8; i++) {
+	var rand = Math.floor((Math.random() * (copy.length-1))); 
+	testArray[i] = copy[rand];
+	copy.splice(rand,1);
+}
 
-
-
+console.log(testArray);
 
 
 
@@ -169,13 +219,10 @@ var Phonebook = {
 };
 
 
+var userName = prompt("What's his name?");
+// var userNo = prompt("what's his number?");
 
-
-
-
-
-
-
+console.log(Phonebook.userName);
 
 
 
