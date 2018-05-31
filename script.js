@@ -224,18 +224,24 @@ var Phonebook = {
 };
 
 
+//PART 1
 var userName = prompt("What's his name?");
 // var userNo = prompt("what's his number?");
 
 console.log(Phonebook[userName]);
 
+//PART 2 & 3
+var userName1 = prompt("What's his name?");
+var userNo1 = parseInt(prompt("what's his number?"));
 
+Phonebook[userName1] = userNo1;
 
+//PART 4
+var userName2 = prompt("What's his name?");
 
-
-
-
-
+if (Phonebook[userName2] != null) {
+	delete Phonebook[userName2];
+} 
 
 
 
@@ -262,7 +268,17 @@ console.log(Phonebook[userName]);
 // =====================================================================
 
 var MutateMeNot = [1, 2, 3, 4, 5];
+var Int1 = parseInt(prompt('first integer please: ')) -1;
+var Int2 = parseInt(prompt('second integer please: ')) -1;
 
+var MutateMeCopy = [];
+
+for (var i=0; i<MutateMeNot.length; i++) {
+	MutateMeCopy.push(MutateMeNot[0]);
+};
+
+MutateMeNot[Int1] = MutateMeCopy[Int2];
+MutateMeNot[Int2] = MutateMeCopy[Int1];
 
 
 
